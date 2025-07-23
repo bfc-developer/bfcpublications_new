@@ -1,0 +1,48 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow: /chorus/
+Disallow: /chorus-demo/
+Disallow: /dev/
+Disallow: /oldweb.bfcpublications.com/
+Disallow: /database/
+Disallow: /payment.js
+Disallow: /payment-response.js
+Disallow: /authorDashboard.bfcpublications.com/
+Disallow: /authordashboard.bfcpublications.com/
+Disallow: /blog/sample-page/
+Disallow: /store.bfcpublications.com/Userlist
+Disallow: /store.bfcpublications.com/Addbook
+Disallow: /store.bfcpublications.com/signin
+Disallow: /store.bfcpublications.com/Cart
+Disallow: /store.bfcpublications.com/Adminprofile
+Disallow: /store.bfcpublications.com/Orderlist
+Disallow: /store.bfcpublications.com/Viewreview
+Disallow: /bfcpublications.com/blog/sample-page/
+Disallow: /bfcpublications.com/blog/packages/
+Disallow: /bfcpublications.com/blog/test/
+Disallow: /bfcpublications.com/blog/services/
+Disallow: /bfcpublications.com/blog/blog/
+Disallow: /authordashboard.bfcpublications.com/author-support
+Disallow: /authordashboard.bfcpublications.com/about-us
+Disallow: /authordashboard.bfcpublications.com/marketing-services
+Disallow: /authordashboard.bfcpublications.com/refund-cancellation
+Disallow: /authordashboard.bfcpublications.com/legal-desclimer
+Disallow: /authordashboard.bfcpublications.com/forget_pass
+Disallow: /authordashboard.bfcpublications.com/login
+Disallow: /about/
+Disallow: /ebookpackages/
+Disallow: /paperbackpackages/
+Disallow: /editorial-services/
+Disallow: /designing-services/
+Disallow: /marketing-services/
+Disallow: /distribution-services/
+Disallow: /author-support/
+Disallow: /faq/
+Disallow: /print-on-demand-book-publishing-india/
+Disallow: /eBook-publisher-in-india/
+Disallow: /contact/
+
+
+
+
+sitemap: https://www.bfcpublications.com/sitemap.xml
