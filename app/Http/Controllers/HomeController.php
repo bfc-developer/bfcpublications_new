@@ -663,6 +663,362 @@ public function bookPubPatna(){
     return view("book-publisher.book-publisher-patna",$data);
 }//End of function
 
+public function bookPubGuwahati(){
+    $data['title'] ="Best book publishers in Guwahati | Self Book Publishing Company";
+    $data['description'] = "BFC Publications is a well-known book publisher in Guwahati, helping aspiring writers achieve their dream of making a name in the literary sector.";
+    $data['keyword'] = "Best book publishers in guwahati,Book publishing companies in guwahati,Top publishers for authors in guwahati,Self book publishing services in guwahati,Book Publisher in guwahati";
+    return view("book-publisher.book-publisher-guwahati",$data);
+}//End of function
+
+public function bookPubKerala(){
+    $data['title'] ="Best book publishers in Kerala | Self Book Publishing Company";
+    $data['description'] = "BFC Publications is a well-known book publisher in Kerala, helping aspiring writers achieve their dream of making a name in the literary sector.";
+    $data['keyword'] = "Best Book publishing companies in kerala,Book publishing companies in kerala,Top publishers for authors in kerala,Self book publishing services in kerala";
+    return view("book-publisher.book-publisher-kerala",$data);
+}//End of function
+
+
+public function bookPubMeerut(){
+    $data['title'] ="Best book publishers in Meerut | Self Book Publishing Company";
+    $data['description'] = "BFC Publications is one of the best book publishers in meerut, helping aspiring authors publish their books and build a name in the literary field.";
+    $data['keyword'] = "Best book publisher in meerut,Book publishing companies in meerut,Top publishers for authors in meerut,Self book publishing services in meerut,Book Publishing service in meerut";
+    return view("book-publisher.book-publisher-meerut",$data);
+}//End of function
+
+public function bookPubBangalore(){
+    $data['title'] ="Best Book Publisher in Bangalore | Self Book Publishing Company";
+    $data['description'] = "BFC Publications is one of the best book publishers in Bangalore, helping aspiring writers turn their ideas into professionally published books.";
+    $data['keyword'] = "Best Book publishing companies in bangalore,Book publishing companies in bangalore,Top publishers for authors in Bangalore,Self-publishing services in bangalore";
+    return view("book-publisher.book-publisher-bangalore",$data);
+}//End of function
+
+public function bookPubNagpur(){
+    $data['title'] ="Best Book Publisher in Nagpur | Self Book Publishing Company";
+    $data['description'] = "BFC Publications is one of the best book publishers in Nagpur, helping aspiring authors publish their books and build a name in the literary field.";
+    $data['keyword'] = "Best Book Publisher in nagpur,Book publishing companies in nagpur,Top publishers for authors in nagpur,Self book publishing services in nagpur,Book Publisher in nagpur";
+    return view("book-publisher.book-publisher-nagpur",$data);
+}//End of function
+
+public function bookPubOdisha(){
+    $data['title'] ="Best Book Publisher in Odisha | Self Book Publishing Company";
+    $data['description'] = "BFC Publications ranks high among the best book publishers in Odisha, supporting writers across genres with end-to-end publishing solutions.";
+    $data['keyword'] = "Best Book Publishers in Odisha,Book Publishers in Odisha,Book publishing companies in odisha,Top publishers for authors in odisha,Self book publishing services in odisha";
+
+    return view("book-publisher.book-publisher-odisha",$data);
+}//End of function 
+public function bookPubPunjab(){
+    $data['title'] ='Best Book Publisher in Punjab | Self Book Publishing Company';
+
+    $data['description'] = "BFC Publications is one of the best book publishers in Punjab, helping aspiring authors publish their work and succeed in the literary world.";
+
+    $data['keyword'] = "Best Book Publisher in Punjab,Book Publisher in Punjab,Book publishing companies in punjab,Top publishers for authors in punjab,Self book publishing services in punjab";
+    return view("book-publisher.book-publisher-punjab",$data);
+}//End of function
+
+public function bookPubAndhraPradesh(){
+    $data['title'] ="Best Book Publisher in Andhra Pradesh | Self Book Publishing Company";
+    $data['description'] = "BFC Publications is one of the best book publishers in Andhra Pradesh, helping aspiring authors publish their books and shine in the literary world.";
+    $data['keyword'] = "Best Book Publisher in andhra pradesh,Book Publisher in andhra pradesh,Book publishing companies in andhra pradesh,Top publishers for authors in andhra pradesh,Self book publishing services in andhra pradesh";
+    return view("book-publisher.book-publisher-andhra-pradesh",$data);
+}//End of function
+
+public function bookPubMadhyaPradesh(){
+    $data['title'] ="Best Book Publisher in Madhya Pradesh | Self Book Publishing Company";
+    $data['description'] = "BFC Publications is one of the best book publishers in Madhya Pradesh, helping aspiring writers publish their work and build a successful author career.";
+    $data['keyword'] = "Best Book Publisher in madhya pradesh,Book Publisher in madhya pradesh,Book publishing companies in madhya pradesh,Top publishers for authors in madhya pradesh,Self book publishing services in madhya pradesh";
+    return view("book-publisher.book-publisher-madhya-pradesh",$data);
+}//End of function
+
+public function bookPubVijayawada(){
+    $data['title'] ="Best Book Publisher in Vijayawada | Self Book Publishing Company";
+    $data['description'] = "BFC Publications is one of the best book publishers in Vijayawada, helping aspiring authors publish their books and achieve success in the literary world.";
+    $data['keyword'] = "Best Book Publisher in vijayawada,Book Publisher in vijayawada,Book publishing companies in vijayawada,Top publishers for authors in vijayawada,Self book publishing services in vijayawada";
+
+    return view("book-publisher.book-publisher-vijayawada",$data);
+}//End of function
+
+public function bookPubDaryaganjDelhi(){
+    $data['title'] ='Best Book Publisher in Daryaganj Delhi | Self Book Publishing Company';
+
+    $data['description'] = "BFC Publications is one of the best book publishers in darya ganj delhi, helping aspiring authors publish their books and achieve success in the literary world.";
+
+    $data['keyword'] = "Best Book Publisher in darya ganj delhi,Book Publisher in darya ganj delhi,Book publishing companies in darya ganj delhi,Top publishers for authors in darya ganj delhi,Self book publishing services in darya ganj delhi";
+    return view("book-publisher.book-publisher-daryaganj-delhi",$data);
+}//End of function
+
+public function bookPubAssam(){
+    $data['title'] ="Best Book Publisher in Assam | Self Book Publishing Company";
+    $data['description'] = "BFC Publications is one of the best book publishers in Assam, helping aspiring writers publish their work and establish themselves in the literary world.";
+    $data['keyword'] = "Best Book Publisher in assam,Book Publisher in assam,Book publishing companies in assam,Top publishers for authors in assam,Self book publishing services in assam";
+    return view("book-publisher.book-publisher-assam",$data);
+}//End of function
+
+public function bookPubRanchi(){
+    $data['title'] ="Best Book Publisher in Ranchi | Self Book Publishing Company";
+    $data['description'] = "BFC Publications is one of the best book publishers in Ranchi, helping aspiring authors publish their books and achieve recognition in the literary world.";
+    $data['keyword'] = "Best Book Publisher in ranchi,Book Publisher in ranchi,Book publishing companies in ranchi,Top publishers for authors in ranchi,Self book publishing services in ranchi,Self Book Publisher in Ranchi";
+    return view("book-publisher.book-publisher-ranchi",$data);
+}//End of function
+
+public function bookPubTamilnadu(){
+    $data['title'] ="Best book publishers in Tamil Nadu | Self Book Publishing Company";
+    $data['description'] = "BFC Publications is one of the best book publishers in Tamilnadu, helping aspiring writers publish their work and establish their voice in the literary world.";
+    $data['keyword'] = "Best Book Publisher in tamilnadu,Book Publisher in tamilnadu,Book publishing companies in tamilnadu,Top publishers for authors in tamilnadu,Self book publishing services in tamilnadu";
+    return view("book-publisher.book-publisher-tamil-nadu",$data);
+}//End of function
+
+public function bookPubFaridabad(){
+    $data['title'] ="Best book publishers in Faridabad | Self Book Publishing Company";
+    $data['description'] = "BFC Publications is one of the best book publishers in Faridabad, helping aspiring writers publish their work and make a mark in the literary world.";
+    $data['keyword'] = "Best Book Publisher in faridabad,Book Publisher in faridabad,Book publishing companies in faridabad,Top publishers for authors in faridabad,Self book publishing services in faridabad";
+    return view("book-publisher.book-publisher-faridabad",$data);
+}//End of function
+
+
+public function bookPubJodhpur(){
+    $data['title'] ="Best book publishers in Jodhpur | Self Book Publishing Company";
+    $data['description'] = "BFC Publications is one of the best book publishers in Jodhpur, helping new and aspiring authors turn their ideas into professionally published books.";
+    $data['keyword'] = "Best Book Publisher in jodhpur,Book Publisher in jodhpur,Book publishing companies in jodhpur,Top publishers for authors in jodhpur,Self book publishing services in jodhpur";
+    return view("book-publisher.book-publisher-jodhpur",$data);
+}//End of function
+
+public function bookPubMadurai(){
+    $data['title'] ="Best book publishers in Madurai | Self Book Publishing Company";
+    $data['description'] = "BFC Publications is one of the best book publishers in Madurai, helping aspiring authors bring their stories to life through expert publishing support.";
+    $data['keyword'] = "Madurai,Book Publisher in madurai,Book publishing companies in madurai,Top publishers for authors in madurai,Self book publishing services in madurai";
+    return view("book-publisher.book-publisher-madurai",$data);
+}//End of function
+public function bookPubRaipur(){  
+    $data['title'] ="Best book publishers in Raipur | Self Book Publishing Company";
+    $data['description'] = "BFC Publications is one of the best book publishers in Raipur, helping aspiring authors publish their books and make their mark in the literary world.";
+    $data['keyword'] = "Best Book Publisher in raipur,Book Publisher in raipur,Book publishing companies in raipur,Top publishers for authors in raipur,Self book publishing services in raipur";
+    return view("book-publisher.book-publisher-raipur",$data);
+}//End of function
+
+
+
+   public function bookPubRajahmundry(){
+       
+    $data['title'] ='Best Book Publisher in Rajahmundry | Self Book Publishing Company';
+
+    $data['description'] = "BFC Publications is one of the best book publishers in Rajahmundry, helping aspiring authors publish their work and grow in the literary world.";
+
+    $data['keyword'] = "Best Book Publisher in rajahmundry,Book Publisher in rajahmundry,Book publishing companies in rajahmundry,Top publishers for authors in rajahmundry,Self book publishing services in rajahmundry";
+    return view("book-publisher.book-publisher-rajahmundry",$data);
+}//End of function
+
+public function bookPubAgra(){
+    $data['title'] ="Best Book Publisher in Agra | Self Book Publishing Company";
+    $data['description'] = "BFC Publications is one of the best book publishers in Agra, helping aspiring authors turn their manuscripts into professionally published books.";
+    $data['keyword'] = "Best Book Publisher in agra,Book Publisher in agra,Book publishing companies in agra,Top publishers for authors in agra,Self book publishing services in agra";
+    return view("book-publisher.book-publisher-agra",$data);
+}//End of function
+
+public function bookPubAligarh(){
+    $data['title'] ="Best Book Publisher in Aligarh | Self Book Publishing Company";
+    $data['description'] = "BFC Publications is one of the best book publishers in Aligarh, helping authors publish their stories and achieve success in the literary world.";
+    $data['keyword'] = "Best Book Publisher in aligarh,Book publishing companies in aligarh,Top publishers for authors in aligarh,Self book publishing services in aligarh,Book Publisher in aligarh";
+    return view("book-publisher.book-publisher-aligarh",$data);
+}//End of function
+
+public function bookPubCalicut(){
+    $data['title'] ="Best Book Publisher in Calicut | Self Book Publishing Company";
+    $data['description'] = "BFC Publications stands among the best book publishers in calicut, offering complete publishing solutions for writers across genres.";
+    $data['keyword'] = "Best Book Publisher in calicut,Book publishing companies in calicut,Top publishers for authors in calicut,Self book publishing services in calicut,Book Publisher in calicut";  
+
+    return view("book-publisher.book-publisher-calicut",$data);
+}//End of function
+public function bookPubCoimbatore(){
+    $data['title'] ='Best Book Publisher in Coimbatore | Self Book Publishing Company';
+
+    $data['description'] = "BFC Publications stands among the best book publishers in Coimbatore, offering complete publishing solutions for writers across genres.";
+
+    $data['keyword'] = "Best Book Publisher in  coimbatore,Book publishing companies in coimbatore,Top publishers for authors in coimbatore,Self book publishing services in coimbatore,Book Publisher in coimbatore";
+    return view("book-publisher.book-publisher-coimbatore",$data);
+}//End of function
+
+public function bookPubCuttack(){
+    $data['title'] ="Best Book Publisher in Cuttack | Self Book Publishing Company";
+    $data['description'] = "Recognized as one of the best book publishers in Cuttack, BFC Publications supports authors with end-to-end publishing and promotional services.";
+    $data['keyword'] = "Best Book Publisher in cuttack,Book publishing companies in cuttack,Top publishers for authors in cuttack,Self book publishing services in cuttack,Book Publisher in cuttack";
+    return view("book-publisher.book-publisher-cuttack",$data);
+}//End of function
+
+public function bookPubDaryaganj(){
+    $data['title'] ="Best Book Publisher in Daryaganj | Self Book Publishing Company";
+    $data['description'] = "BFC Publications is one of the best book publishers in Daryaganj, providing expert guidance to aspiring authors on their publishing journey.";
+    $data['keyword'] = "Best Book Publisher in daryaganj,Book publishing companies in daryaganj,Top publishers for authors in daryaganj,Self book publishing services in daryaganj,Book Publisher in daryaganj";
+    return view("book-publisher.book-publisher-daryaganj",$data);
+}//End of function
+
+public function bookPubGhaziabad(){
+    $data['title'] ="Best Book Publisher in Ghaziabad | Self Book Publishing Company";
+    $data['description'] = "BFC Publications is a trusted name among the best book publishers in Ghaziabad, offering professional publishing support for new and experienced writers.";
+    $data['keyword'] = "Book publishing companies in ghaziabad,Top publishers for authors in ghaziabad,Self book publishing services in ghaziabad,Book Publisher in ghaziabad";
+
+    return view("book-publisher.book-publisher-ghaziabad",$data);
+}//End of function
+
+public function bookPubGoa(){
+    $data['title'] ='Best Book Publisher in Goa | Self Book Publishing Company';
+
+    $data['description'] = "Counted among the best book publishers in Goa, BFC Publications helps authors turn ideas into impactful books with global reach.";
+
+    $data['keyword'] = "Best Book Publisher in goa,Book publishing companies in goa,Top publishers for authors in goa,Self book publishing services in goa,Book Publisher in goa";
+    return view("book-publisher.book-publisher-goa",$data);
+}//End of function
+
+public function bookPubGujarat(){
+    $data['title'] ="Best Book Publisher in Gujarat | Self Book Publishing Company";
+    $data['description'] = "BFC Publications ranks among the best book publishers in Gujarat, delivering quality publishing services for fiction, non-fiction, and academic books.";
+    $data['keyword'] = "Best Book Publisher in gujarat,Book publishing companies in gujarat,Top publishers for authors in gujarat,Self book publishing services in gujarat,Book Publisher in gujarat";
+    return view("book-publisher.book-publisher-gujarat",$data);
+}//End of function
+
+public function bookPubGurgaon(){
+    $data['title'] ="Best Book Publisher in Gurgaon | Self Book Publishing Company";
+    $data['description'] = "Recognized among the best book publishers in Gurgaon, BFC Publications empowers writers with personalized publishing support and global distribution.";
+    $data['keyword'] = "Best Book Publisher in gurgaon,Book publishing companies in gurgaon,Top publishers for authors in gurgaon,Self book publishing services in gurgaon,Book Publisher in gurgaon";
+    return view("book-publisher.book-publisher-gurgaon",$data);
+}//End of function
+
+public function bookPubJalandhar(){
+    $data['title'] ="Best book publishers in Jalandhar | Self Book Publishing Company";
+    $data['description'] = "BFC Publications is one of the best book publishers in Jalandhar, committed to helping authors publish and promote their work effectively.";
+    $data['keyword'] = "Best Book Publisher in jalandhar,Book publishing companies in jalandhar,Top publishers for authors in jalandhar,Self book publishing services in jalandhar,Book Publisher in jalandhar";
+    return view("book-publisher.book-publisher-jalandhar",$data);
+}//End of function
+
+public function bookPubKanpur(){
+    $data['title'] ="Best book publishers in Kanpur | Self Book Publishing Company";
+    $data['description'] = "BFC Publications stands out among the best book publishers in Kanpur, offering expert publishing services to bring your story to life.";
+    $data['keyword'] = "Best Book Publisher in kanpur,Book publishing companies in kanpur,Top publishers for authors in kanpur,Self book publishing services in kanpur,Book Publisher in kanpur";
+    return view("book-publisher.book-publisher-kanpur",$data);
+}//End of function
+
+
+public function bookPubKarnataka(){
+    $data['title'] ="Best book publishers in Karnataka | Self Book Publishing Company";
+    $data['description'] = "BFC Publications is one of the best book publishers in Karnataka, offering end-to-end publishing services for writers across multiple genres.";
+    $data['keyword'] = "Best Book Publisher in karnataka,Book publishing companies in karnataka,Top publishers for authors in karnataka,Self book publishing services in karnataka,Book Publisher in karnataka";
+    return view("book-publisher.book-publisher-karnataka",$data);
+}//End of function
+
+public function bookPubKathmandu(){
+    $data['title'] ="Best Book Publisher in Kathmandu | Self Book Publishing Company";
+    $data['description'] = "Recognized as one of the best book publishers in Kathmandu, BFC Publications helps authors publish their books with global reach and professional quality.";
+    $data['keyword'] = "Best Book Publisher in kathmandu,Book publishing companies in kathmandu,Top publishers for authors in kathmandu,Self book publishing services in kathmandu,Book Publisher in kathmandu";
+    return view("book-publisher.book-publisher-kathmandu",$data);
+}//End of function
+
+public function bookPubKochi(){
+    $data['title'] ="Best Book Publisher in Kochi | Self Book Publishing Company";
+    $data['description'] = "BFC Publications stands among the best book publishers in Kochi, guiding authors from manuscript to market with expert publishing support.";
+    $data['keyword'] = "Best Book Publisher in kochi,Book publishing companies in kochi,Top publishers for authors in kochi,Self book publishing services in kochi,Book Publisher in kochi";
+    return view("book-publisher.book-publisher-kochi",$data);
+}//End of function
+
+public function bookPubKottayam(){
+    $data['title'] ="Best Book Publisher in Kottayam | Self Book Publishing Company";
+    $data['description'] = "BFC Publications is a leading name among the best book publishers in Kottayam, delivering quality publishing for both regional and English authors.";
+    $data['keyword'] = "Best Book Publisher in kottayam,Book publishing companies in kottayam,Top publishers for authors in kottayam,Self book publishing services in kottayam,Book Publisher in kottayam";
+
+    return view("book-publisher.book-publisher-kottayam",$data);
+}//End of function
+public function bookPubLudhiana(){
+    $data['title'] ='Best Book Publisher in Ludhiana | Self Book Publishing Company';
+
+    $data['description'] = "BFC Publications is one of the best book publishers in Ludhiana, empowering writers with full publishing support and professional guidance.";
+
+    $data['keyword'] = "Best Book Publisher in ludhiana,Book publishing companies in ludhiana,Top publishers for authors in ludhiana,Self book publishing services in ludhiana,Book Publisher in ludhiana";
+    return view("book-publisher.book-publisher-ludhiana",$data);
+}//End of function
+
+public function bookPubMaharashtra(){
+    $data['title'] ="Best Book Publisher in Maharashtra | Self Book Publishing Company";
+    $data['description'] = "Recognized among the best book publishers in Maharashtra, BFC Publications offers complete publishing services tailored to every author’s needs.";
+    $data['keyword'] = "Best Book Publisher in maharashtra,Book publishing companies in maharashtra,Top publishers for authors in maharashtra,Self book publishing services in maharashtra,Book Publisher in maharashtra";
+    return view("book-publisher.book-publisher-maharashtra",$data);
+}//End of function
+
+public function bookPubNashik(){
+    $data['title'] ="Best Book Publisher in Nashik | Self Book Publishing Company";
+    $data['description'] = "BFC Publications is one of the best book publishers in Nashik, providing professional publishing, editing, and distribution support to authors.";
+    $data['keyword'] = "Best Book Publisher in nashik,Book publishing companies in nashik,Top publishers for authors in nashik,Self book publishing services in nashik,Book Publisher in nashik";
+    return view("book-publisher.book-publisher-nashik",$data);
+}//End of function
+
+public function bookPubNewDelhi(){
+    $data['title'] ="Best Book Publisher in New Delhi | Self Book Publishing Company";
+    $data['description'] = "BFC Publications stands among the best book publishers in New Delhi, offering premium publishing services for authors at every stage of their journey.";
+    $data['keyword'] = "Best Book Publisher in new delhi,Book publishing companies in new delhi,Top publishers for authors in new delhi,Self book publishing services in new delhi,Book Publisher in new delhi";
+
+    return view("book-publisher.book-publisher-new-delhi",$data);
+}//End of function
+
+public function bookPubRajasthan(){
+    $data['title'] ='Best Book Publisher in Rajasthan | Self Book Publishing Company';
+
+    $data['description'] = "BFC Publications is a trusted name among the best book publishers in Rajasthan, supporting writers with quality publishing and marketing solutions.";
+
+    $data['keyword'] = "Best Book Publisher in rajasthan,Book publishing companies in rajasthan,Top publishers for authors in rajasthan,Self book publishing services in rajasthan,Book Publisher in rajasthan";
+    return view("book-publisher.book-publisher-rajasthan",$data);
+}//End of function
+
+public function bookPubSurat(){
+    $data['title'] ="Best Book Publisher in Surat | Self Book Publishing Company";
+    $data['description'] = "Recognized as one of the best book publishers in Surat, BFC Publications helps authors across genres publish and promote their books with confidence.";
+    $data['keyword'] = "Best Book Publisher in surat,Book publishing companies in surat,Top publishers for authors in surat,Self book publishing services in surat,Book Publisher in surat";
+    return view("book-publisher.book-publisher-surat",$data);
+}//End of function
+
+public function bookPubThrissur(){
+    $data['title'] ="Best Book Publisher in Thrissur | Self Book Publishing Company";
+    $data['description'] = "BFC Publications is one of the best book publishers in Thrissur, offering personalized support and publishing services to regional and English authors alike.";
+    $data['keyword'] = "Best Book Publisher in thrissur,Book publishing companies in thrissur,Top publishers for authors in thrissur,Self book publishing services in thrissur,Book Publisher in thrissur";
+    return view("book-publisher.book-publisher-thrissur",$data);
+}//End of function
+
+public function bookPubTrivandrum(){
+    $data['title'] ="Best book publishers in Trivandrum | Self Book Publishing Company";
+    $data['description'] = "Counted among the best book publishers in Trivandrum, BFC Publications provides expert guidance from editing to global book distribution.";
+    $data['keyword'] = "Best Book Publisher in  trivandrum,Book publishing companies in  trivandrum,Top publishers for authors in  trivandrum,Self book publishing services in  trivandrum,Book Publisher in  trivandrum";
+    return view("book-publisher.book-publisher-trivandrum",$data);
+}//End of function
+
+public function bookPubVadodara(){
+    $data['title'] ="Best book publishers in Vadodara | Self Book Publishing Company";
+    $data['description'] = "BFC Publications is one of the best book publishers in Vadodara, helping writers publish high-quality books with national and international reach.";
+    $data['keyword'] = "Best Book Publisher in vadodara,Book publishing companies in vadodara,Top publishers for authors in vadodara,Self book publishing services in vadodara,Book Publisher in vadodara";
+    return view("book-publisher.book-publisher-vadodara",$data);
+}//End of function
+
+
+public function bookPubVaranasi(){
+    $data['title'] ="Best book publishers in Varanasi | Self Book Publishing Company";
+    $data['description'] = "BFC Publications ranks among the best book publishers in Varanasi, offering end-to-end publishing support for authors of all backgrounds.";
+    $data['keyword'] = "Best Book Publisher in varanasi,Book publishing companies in varanasi,Top publishers for authors in varanasi,Self book publishing services in varanasi,Book Publisher in varanasi";
+    return view("book-publisher.book-publisher-varanasi",$data);
+}//End of function
+
+public function bookPubChhattisgarh(){
+    $data['title'] ="Best book publishers in Chhattisgarh | Self Book Publishing Company";
+    $data['description'] = "helping writers turn their ideas into professionally published books.";
+    $data['keyword'] = "Best Book Publisher in chhattisgarh,Book publishing companies in chhattisgarh,Top publishers for authors in chhattisgarh,Self book publishing services in chhattisgarh,Book Publisher in chhattisgarh";
+    return view("book-publisher.book-publisher-chhattisgarh",$data);
+}//End of function
+
+
+
+
+
+
+
+
+
+
+
+
 public function shippinganddelivery(){
      $data['title'] ="shipping-and-delivery";
     $data['description'] = "";
