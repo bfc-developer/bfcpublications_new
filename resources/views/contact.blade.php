@@ -58,8 +58,10 @@
                 <div class="col-md-7 mt-smc-2">
                     <h4>GET IN TOUCH</h4>
                     <hr>
+                    <div id="formError" class="alert alert-danger d-none"></div>
                     <form id="contact_us_form" class="row g-3">
-                        <div class="col-md-6">
+                     
+                    <div class="col-md-6">
                             <label for="inputname" class="form-label">Name</label>
                             <input type="text" class="form-control" id="inputname" name="inputname"
                                 placeholder="Enter Your Name">

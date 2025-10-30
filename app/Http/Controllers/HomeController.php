@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\DB;
 use App\Mail\ContactUsEmail;
 use App\Mail\ContactUsUserMail;
+use LanguageDetection\Language;
 use App\Mail\HRcareerMail;
 use App\Mail\UserCareerMail;
 use App\Mail\PackageThanksMail;
@@ -16,10 +18,9 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use App\Mail\PackageConfirmation;
 
+use Illuminate\Support\Facades\Validator;
 use Session;
 use File;
-use Validator;
-use DB;
 use PDF;
 
 class HomeController extends Controller{
@@ -127,7 +128,7 @@ $data['bookstore']=NULL;
         return view('contact',$data);
     }//End of function
 
-    public function sendMailContactUs(Request $request){
+    public function sendMailContactUs1(Request $request){
 
         $validatedData = Validator::make($request->all(),[
             'inputname' => 'required',
@@ -169,6 +170,99 @@ $data['bookstore']=NULL;
         return response()->json(['status_code'=>200,'message' => 'Submitted Successfully']);
 
     }//End of function
+ 
+public function sendMailContactUs(Request $request)
+{
+    try {
+        // 🧠 Detect language
+        $ld = new Language;
+        $result = $ld->detect($request->message)->bestResults()->close();
+
+        // Get top detected language + confidence
+        $topLang = array_key_first($result);
+        $confidence = $result[$topLang] ?? 0;
+
+        // Allow English or close variants with decent confidence
+        if (!str_starts_with($topLang, 'en') && $confidence < 0.7) {
+            return response()->json([
+                'status_code' => 301,
+                'message' => ['Only English messages are allowed.']
+            ]);
+        }
+
+     if (!preg_match('/^[A-Za-z0-9\s.,!?\'":;()\-\/&%]+$/', $request->message)) {
+    return response()->json([
+        'status_code' => 301,
+        'message' => ['Only English messages are allowed.']
+    ]);
+}
+
+        // 🛑 Validate form input
+        $validator = Validator::make($request->all(), [
+            'inputname' => [
+                'required',
+                function ($attribute, $value, $fail) {
+                    $blockedNames = ['robertkib', 'testuser', 'admin']; // add more spam names
+                    if (in_array(strtolower($value), $blockedNames)) {
+                        $fail('This name is not allowed.');
+                    }
+                },
+            ],
+            'inputemail' => 'required|email|indisposable',
+            'inputnumber' => 'required|digits:10',
+            'checkbox' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'status_code' => 301,
+                'message' => $validator->errors()->all(),
+            ]);
+        }
+
+        // ✅ Prepare form data
+        $formData = [
+            'name' => $request->inputname,
+            'email' => $request->inputemail,
+            'phone' => $request->inputnumber,
+            'type' => 3,
+            'user_id' => 1,
+        ];
+
+        $formData1 = [
+            'subject' => $request->subject,
+            'message' => $request->message,
+        ];
+
+        // 💾 Save to DB
+        $insertId = DB::table('refer_friends')->insertGetId($formData);
+
+        // ✉️ Send mails
+        Mail::to('support@bfcpublications.com')->send(new ContactUsEmail($formData, $formData1));
+        Mail::to($request->inputemail)->send(new ContactUsUserMail(['name' => $request->inputname]));
+
+        // ✅ Success response
+        if ($insertId) {
+            return response()->json([
+                'status_code' => 200,
+                'message' => 'Submitted Successfully'
+            ]);
+        }
+
+        return response()->json([
+            'status_code' => 500,
+            'message' => ['Something went wrong.']
+        ]);
+
+    } catch (\Throwable $e) {
+        // 🔥 Catch SMTP or other exceptions
+        return response()->json([
+            'status_code' => 500,
+            'message' => ['Mail sending failed. Please try again later.']
+        ]);
+    }
+}
+
 
     function sendEmailToHRAndUser(Request $request){
         $validatedData = $request->validate([

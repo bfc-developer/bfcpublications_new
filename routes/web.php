@@ -26,10 +26,13 @@ Route::middleware([CheckUnnecessaryURLs::class])->group(function () {
 
     Route::post('/save_data',[HomeController::class,'savePublishingModal']);
     Route::post('/save_payment_details',[HomeController::class,'savePaymentform']);
-    Route::post('/send_contact_us_mail',[HomeController::class,'sendMailContactUs']);
+    // Route::post('/send_contact_us_mail',[HomeController::class,'sendMailContactUs']);
     Route::post('/send_mail_hr_user',[HomeController::class,'sendEmailToHRAndUser']);
     Route::get('/contact',[HomeController::class,'ContactUsPage']);
-    Route::post('/send_contact_us_mail',[HomeController::class,'sendMailContactUs']);
+   Route::post(
+    '/send_contact_us_mail',
+    [HomeController::class, 'sendMailContactUs']
+)->middleware('throttle:2,1');
 
     Route::get('/royalty-calculator',[HomeController::class, 'royalty_calculator']);
     Route::post('/royalty_calculate_data',[HomeController::class,'royalty_calculate_data']);

@@ -64,4 +64,11 @@
       0 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
     ),
   ),
+  'propaganistas/laravel-disposable-email' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Propaganistas\\LaravelDisposableEmail\\DisposableEmailServiceProvider',
+    ),
+  ),
 );

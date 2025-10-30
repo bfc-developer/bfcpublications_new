@@ -1,74 +1,160 @@
-// $("#contact_us_form").validate({
-//   rules: {
-//     inputname: "required",
-//     inputemail: "required",
-//     // subject: "required",
-//     // message: "required",
-//     inputnumber: {
-//       required: true,
-//       minlength: 10,
-//       maxlength: 10,
-//     },
-//   },
 
-//   // messages: {
-//   //     name: "Name field is required.",
-//   //     email: "Email field is required.",
-//   //     mobile: "Mobile field is required.",
-//   // },
+// $(document).ready(function() {
+//   $("#contact_us_form").validate({
+//     rules: {
+//       inputname: "required",
+//       inputemail: "required",
+//       checkbox: "required",
+//       inputnumber: {
+//         required: true,
+//         minlength: 10,
+//         maxlength: 10,
+//       },
+//     },
+
+//     messages: {
+//       checkbox: "Checkbox required.",
+//     },
+//     errorPlacement: function(error, element) {
+//       if (element.attr("name") == "checkbox") {
+//           error.appendTo("#check_box_err");
+//       } else {
+//           error.insertAfter(element);
+//       }
+//     }
+//   });
 // });
-$(document).ready(function() {
+// $("#contact_us_form").on("submit", function (e) {
+//   e.preventDefault();
+//   $.ajaxSetup({
+//     headers: {
+//       "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+//     },
+//   });
+//   $.ajax({
+//     url: host + "/send_contact_us_mail",
+//     type: "POST",
+//     data: new FormData(this),
+//     contentType: false,
+//     processData: false,
+//     success: function (msg) {
+//       if (msg.status_code == 200) {
+//         // toastr["success"](msg.message);
+//         $("#contact_us_form").trigger("reset");
+//         window.location.href = "/thank-you";
+//       } else if (msg.status_code == 301) {
+//         $.each(msg.message, function (k, v) {
+//           toastr["error"](v);
+//         });
+//       } else {
+//         console.log(msg.message);
+//       }
+//     },
+//   });
+// });
+$(document).ready(function () {
+  // 🚫 Prevent space as first character
+  $("input, textarea").on("keypress", function (e) {
+    if (this.value.length === 0 && e.which === 32) e.preventDefault();
+  });
+
+  // 📱 Allow only digits and limit to 10
+  $('input[name="inputnumber"]').on("input", function () {
+    this.value = this.value.replace(/\D/g, "").substr(0, 10);
+  });
+
+  $.ajaxSetup({
+    headers: {
+      "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+    },
+  });
+
+  // ✅ Form validation
   $("#contact_us_form").validate({
     rules: {
       inputname: "required",
       inputemail: "required",
       checkbox: "required",
-      // subject: "required",
-      // message: "required",
       inputnumber: {
         required: true,
         minlength: 10,
         maxlength: 10,
       },
     },
-
     messages: {
       checkbox: "Checkbox required.",
     },
-    errorPlacement: function(error, element) {
+    errorPlacement: function (error, element) {
       if (element.attr("name") == "checkbox") {
-          error.appendTo("#check_box_err");
+        error.appendTo("#check_box_err");
       } else {
-          error.insertAfter(element);
+        error.insertAfter(element);
       }
-    }
-  });
-});
-$("#contact_us_form").on("submit", function (e) {
-  e.preventDefault();
-  $.ajaxSetup({
-    headers: {
-      "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
     },
-  });
-  $.ajax({
-    url: host + "/send_contact_us_mail",
-    type: "POST",
-    data: new FormData(this),
-    contentType: false,
-    processData: false,
-    success: function (msg) {
-      if (msg.status_code == 200) {
-        // toastr["success"](msg.message);
-        $("#contact_us_form").trigger("reset");
-        window.location.href = "/thank-you";
-      } else if (msg.status_code == 301) {
-        $.each(msg.message, function (k, v) {
-          // toastr["error"](v);
-        });
-      } else {
-        console.log(msg.message);
-      }
+
+    submitHandler: function (form) {
+      $("#formError").addClass("d-none").html("");
+
+      $.ajax({
+        url: host + "/send_contact_us_mail",
+        type: "POST",
+        data: new FormData(form),
+        contentType: false,
+        processData: false,
+        success: function (res) {
+          // ✅ Success
+          if (res.status_code == 200) {
+            $(form).trigger("reset");
+            window.location.href = "/thank-you";
+          }
+
+          // ⚠️ Validation/logic errors (301)
+          else if (res.status_code == 301) {
+            let messageText = Array.isArray(res.message)
+              ? res.message.join("<br>")
+              : res.message;
+
+            $("#formError")
+              .removeClass("d-none alert-success")
+              .addClass("alert alert-danger")
+              .html(messageText)
+              .fadeIn();
+
+            // ⏳ Auto-hide + reset after 15 seconds
+            setTimeout(() => {
+              $("#formError").fadeOut("slow", function () {
+                $(this).addClass("d-none").show().html("");
+                $("#contact_us_form").trigger("reset");
+              });
+            }, 15000);
+          }
+        },
+
+        error: function (xhr) {
+          // ⛔ Too many attempts
+          if (xhr.status === 429) {
+            $("#formError")
+              .removeClass("d-none alert-success")
+              .addClass("alert alert-danger")
+              .html(
+                "Too many attempts! Please wait a minute before trying again."
+              )
+              .fadeIn();
+
+            // ⏳ Auto-hide + clear form after 15 seconds
+            setTimeout(() => {
+              $("#formError").fadeOut("slow", function () {
+                $(this).addClass("d-none").show().html("");
+                $("#contact_us_form").trigger("reset");
+              });
+            }, 15000);
+          } else {
+            console.warn("Mail sending failed or SMTP issue.");
+          }
+        },
+      });
+
+      return false;
     },
   });
 });
