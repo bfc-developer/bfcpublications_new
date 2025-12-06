@@ -2313,25 +2313,28 @@
             </div>
             <div class="modal-body">
                 <form id="publishing_start_form" class='p-1'>
-                    <div class="form-group has-search mb-3  ">
+                  
+                    <div class="row">
+                         <div class="col-md-6">
+                              <div class="form-group has-search mb-2">
                         <label htmlFor="name">Your Name</label>
                         <i class="fa fa-user fa-1x form-control-feedback"></i>
                         <input type="text" name="name" id="popup_name" class="form-control"
                             placeholder="Your Name" />
                         <span class="text-danger" id="name_err"> </span>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group has-search mb-3">
+                         </div>
+                         <div class="col-md-6">
+                            <div class="form-group has-search mb-2">
                                 <label htmlFor="email">Email</label>
                                 <i class="fa fa-envelope form-control-feedback"></i>
                                 <input type="email" name="email" id="popup_email" class="form-control"
                                     placeholder="Email" />
                                 <span class="text-danger" id="email_err"> </span>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group has-search mb-3">
+                         </div>
+ <div class="col-md-6">
+                            <div class="form-group has-search mb-2">
                                 <label htmlFor="contact">Contact Number</label>
                                 <i class="fa fa-phone form-control-feedback"></i>
                                 <input type="number" name="mobileno" id="popup_mobileno" class="form-control"
@@ -2339,18 +2342,22 @@
                                 <span class="text-danger" id="mobileno_err"> </span>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group has-search mb-3">
+                        <div class="col-md-6">
+                             <div class="form-group has-search mb-2">
                         <label htmlFor="book_language">What is your book language?</label>
                         <i class="fa fa-book form-control-feedback"></i>
                         <input type="text" name="book_language" id="popup_book_language" class="form-control"
                             placeholder="Book Language" />
                         <span class="text-danger" id="book_language_err"> </span>
                     </div>
+                        </div>
+                       
+                    </div>
+                   
                     <div class="row">
                         
                         <div class="col-md-6">
-                            <div class="form-group has-search mb-3">
+                            <div class="form-group has-search mb-2">
                                 <label for="manuscript_status">What is the status of your manuscript?</label>
                                 <i class="fa fa-file-text form-control-feedback"></i>
                                 <select name="manuscript_status" id="popup_manuscript_status" class="form-control">
@@ -2362,7 +2369,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-group has-search mb-3">
+                            <div class="form-group has-search mb-2">
                                 <label for="book_earlier">Have you published any book earlier?</label>
                                 <i class="fa fa-question-circle form-control-feedback"></i>
                                 <select name="book_earlier" id="popup_book_earlier" class="form-control">
@@ -2376,13 +2383,13 @@
 
                     </div>
 
-                    <div class="form-group has-search mb-3">
+                    <div class="form-group has-search mb-2">
                         <label for="book_title">What is your book title?</label>
                         <i class="fa fa-bookmark form-control-feedback"></i>
                         <input type="text" name="book_title" id="popup_book_title" class="form-control" placeholder="Book Title" />
                         <span class="text-danger" id="book_title_err"></span>
                     </div>
-                    <div class="form-group has-search mb-3 checkbox_content">
+                    <div class="form-group has-search mb-2 checkbox_content">
                         <input type="checkbox" name="checkbox" id="checkbox">
                         <span class="checkbox_content">I, hereby accord my consent to process my above mentioned personal data by BFC Publications Pvt. Ltd. for the purpose of Author support/Service Promotion, in accordance with the provisions of DPDP Act 2023.</span>
                         <br>

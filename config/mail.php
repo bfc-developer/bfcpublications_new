@@ -52,7 +52,7 @@ return [
         'username' => env('MAIL_USERNAME'),
         'password' => env('MAIL_PASSWORD'),
         'timeout' => null,
-        'local_domain' => env('MAIL_EHLO_DOMAIN', 'bfcsofttech.com'), // ✅ Fix HELO issue
+        'local_domain' => env('MAIL_EHLO_DOMAIN', 'bfcpublications.com'), // ✅ Fix HELO issue
     ],
 
 

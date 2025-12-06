@@ -133,7 +133,7 @@ $data['bookstore']=NULL;
         $validatedData = Validator::make($request->all(),[
             'inputname' => 'required',
             'inputemail' => 'required|email',
-            'inputnumber' => 'required',
+            'inputnumber' => 'required|regex:/^[6-9]\d{9}$/', //['regex:/^[6-9]\d{9}$/']
             'checkbox' => 'required',
         ]);
 

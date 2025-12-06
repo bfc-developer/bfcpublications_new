@@ -71,6 +71,20 @@
         .toast-success {
             background-color: #2fbd36;
         }
+        .logo-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.logo-wrapper::after {
+    content: "™";
+    font-size: 14px;        /* adjust size as needed */
+    font-weight: bold;
+    position: absolute;
+    top: -2px;              /* move vertically */
+    right: -10px;            /* move horizontally */
+    color: #000;            /* change color if needed */
+}
     </style>
 </head>
 
@@ -87,8 +101,9 @@
     <!-- <nav class="custom-shadow navbar navbar-expand-lg navbar-light sticky-top"> -->
     <nav class="custom-shadow navbar navbar-expand-xl navbar-light sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{{ url('/') }}"><img src="{{ url('assets/img/logo/bfc-logo.png') }}"
-                    alt='logo' class="img-fluid logo" /></a>
+            <a class="navbar-brand logo-wrapper" href="{{ url('/') }}">
+    <img src="{{ url('assets/img/logo/bfc-logo.png') }}" alt="logo" class="img-fluid logo" />
+</a>
             <button aria-controls="basic-navbar-nav" type="button" aria-label="Toggle navigation"
                 class="navbar-toggler collapsed">
                 <span class="navbar-toggler-icon"></span>

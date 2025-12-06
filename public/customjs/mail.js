@@ -57,11 +57,26 @@ $(document).ready(function () {
   $("input, textarea").on("keypress", function (e) {
     if (this.value.length === 0 && e.which === 32) e.preventDefault();
   });
-
-  // 📱 Allow only digits and limit to 10
-  $('input[name="inputnumber"]').on("input", function () {
+$('input[name="inputnumber"]').on("input", function () {
+    // allow only digits & limit to 10 digits
     this.value = this.value.replace(/\D/g, "").substr(0, 10);
-  });
+
+    let mobile = this.value;
+
+    // Live validity check
+    if (mobile.length === 10 && /^[6-9]\d{9}$/.test(mobile)) {
+        $(this).removeClass("is-invalid").addClass("is-valid");
+    } else {
+        $(this).removeClass("is-valid").addClass("is-invalid");
+    }
+});
+
+
+// 🔹 Add custom phone validation for jQuery validate
+$.validator.addMethod("indianMobile", function (value, element) {
+    return this.optional(element) || /^[6-9]\d{9}$/.test(value);
+}, "Enter a valid 10-digit Indian phone number starting with 6,7,8 or 9.");
+
 
   $.ajaxSetup({
     headers: {
@@ -71,16 +86,17 @@ $(document).ready(function () {
 
   // ✅ Form validation
   $("#contact_us_form").validate({
-    rules: {
-      inputname: "required",
-      inputemail: "required",
-      checkbox: "required",
-      inputnumber: {
-        required: true,
-        minlength: 10,
-        maxlength: 10,
+      rules: {
+        inputname: "required",
+        inputemail: "required",
+        checkbox: "required",
+        inputnumber: {
+          required: true,
+          minlength: 10,
+          maxlength: 10,
+          indianMobile: true,
+        },
       },
-    },
     messages: {
       checkbox: "Checkbox required.",
     },

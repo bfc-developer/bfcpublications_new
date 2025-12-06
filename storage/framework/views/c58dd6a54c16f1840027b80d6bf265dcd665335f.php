@@ -73,9 +73,10 @@
                         </div>
 
                         <div class="col-md-6">
-                            <label for="inputnumber" class="form-label">Phone Number</label>
-                            <input type="number" class="form-control" id="inputnumber" name="inputnumber"
-                                placeholder="Enter Your Phone Number">
+                            <label for="inputnumber" class="form-label">Phone aNumber</label>
+                           <input type="text" name="inputnumber" class="form-control" placeholder="Enter Your Phone Number">
+
+
                         </div>
                         <div class="col-md-6">
                             <label for="inputPost" class="form-label">Subject</label>
